@@ -1,0 +1,116 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--                                                               -->
+<!-- Consider inlining CSS to reduce the number of requested files -->
+<!--                                                               -->
+<!-- Website Font style -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="OneDesk.css">
+
+<!--                                           -->
+<!-- Any title is fine                         -->
+<!--                                           -->
+<title>OneDesk test project</title>
+
+<!--                                           -->
+<!-- This script loads your compiled module.   -->
+<!-- If you add any GWT meta tags, they must   -->
+<!-- be added before this line.                -->
+<!--                                           -->
+<script type="text/javascript" language="javascript" src="onedesk/onedesk.nocache.js"></script>
+</head>
+
+<!--                                           -->
+<!-- The body can have arbitrary html, or      -->
+<!-- you can leave the body empty if you want  -->
+<!-- to create a completely dynamic UI.        -->
+<!--                                           -->
+<body>
+
+    <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+    <noscript>
+        <div
+            style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+            Your web browser must have JavaScript enabled in order for this application to display correctly.</div>
+    </noscript>
+
+    <div class="container" id="container">
+            <div class="panel-heading">
+                <div class="panel-title text-center">
+                    <h1 class="title">Test Form</h1>
+                </div>
+            </div>
+            <div class="main-login main-center">
+                <form class="form-horizontal" method="post" action="#">
+
+                    <div class="form-group">
+                        <label for="name" class="cols-sm-2 control-label">Name</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group" id="name-wrapper">
+                                <span class="input-group-addon transparent no-border"><i class="fa fa-user fa" aria-hidden="true"></i></span> 
+                                <input type="text"
+                                    class="form-control no-border no-shadow" name="name" id="name" placeholder="Enter your Name" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="job" class="cols-sm-2 control-label">Job</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group" id="job-wrapper">
+                                <span class="input-group-addon transparent no-border"><i class="fa fa-list fa" aria-hidden="true"></i></span> 
+                                <select class="selectpicker form-control no-border no-shadow" id="job" title="Select a job" required>
+                                    <!-- <option value="1">Tinker</option>
+                                    <option value="2">Tailor</option>
+                                    <option value="3">Soldier</option>
+                                    <option value="4">Sailor</option> -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input id="check" type="checkbox" value="checkbox">
+                        <label for="check" class="cols-sm-2 control-label">I agree to send information</label>
+                    </div>
+
+                    <div class="form-group ">
+                        <button type="button" class="login-button btn" id="send">SEND →</button>
+                    </div>
+
+                </form>
+                
+                
+        </div>
+    </div>
+    <div class="alert btn-danger disabled validation-message hidden" id="fields-error" >Please fill in all fields</div>
+    <div class="alert btn-danger disabled validation-message hidden" id="checkbox-error" >Please check the checkbox</div>
+    
+    <div class="success-message hidden" id="success-message">Your data has been sent successfully</div>
+</body>
+</html>
